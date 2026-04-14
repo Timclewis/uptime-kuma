@@ -1,0 +1,17 @@
+app = "uptime-timeserve"
+primary_region = "arn"
+
+[build]
+image = "louislam/uptime-kuma:latest"
+
+[http_service]
+auto_start_machines = true
+auto_stop_machines = true
+internal_port = 3_001
+min_machines_running = 1
+processes = [ "app" ]
+
+[[vm]]
+cpu_kind = "shared"
+cpus = 1
+memory = "768mb"
