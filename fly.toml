@@ -1,4 +1,4 @@
-app = "uptime-timeserve"
+app = "uptime-kuma-timserve"
 primary_region = "arn"
 
 [build]
@@ -7,7 +7,7 @@ image = "louislam/uptime-kuma:latest"
 [http_service]
 auto_start_machines = true
 auto_stop_machines = true
-internal_port = 3_001
+internal_port = 3001
 min_machines_running = 1
 processes = [ "app" ]
 
